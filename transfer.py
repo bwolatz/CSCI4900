@@ -1,58 +1,36 @@
+#!/usr/bin/env python
 import subprocess;
 import re;
 import MySQLdb;
 import sys;
 
-#fname = re.compile("[a-zA-z]+\.[a-zA-z]+");
-#lname = re.compile("\S+$");
-pos = 0;
+#Declaring the variables for the program
 count = 0;
+pos = 0;
 results = [];
+
+#loop to check and get all the lines of output from nomos for all the files. 
 for arg in sys.argv:
 	if(count > 0):
-		results[pos] = subprocess.check_output(["/usr/share/fossology/nomos/agent/nomos","-d","/home/nikhit/%s"%(arg,)]);
-		pos+=1;
+		results.insert(pos,subprocess.check_output(["/usr/share/fossology/nomos/agent/nomos","-d","/home/nikhit/%s"%(arg,)]));
+		pos += 1;
 	count += 1;
-everything = [];	
+
+#Loops for the program to check all the lines of output and split and store the filename and the license into separate sets of loops
+counter = 0;
+allinfo = [];
 for match in results:
-	everything.insert(re.split("\s+",match));
-#for match in everything:
-#	print "Everything: ",match;
-count = 1;
-pos = 0;
-filename = [];
-license = [];
-for match in everything:
-	if(count == 2):
-		filename.insert(pos,match)
-	elif(count == 5):
-		license.insert(pos,match)
-		count = 0
-		pos += 1
-	count += 1;
-
-print len(filename);
-print len(license);
-for match in filename:
-	print "FileName: ",match;
-for match in license:
-	print "License: ",match;
-
-
-#filename = fname.finditer(results);
-#licensename = lname.finditer(results);
-#for match in filename:
-#	print "File Name: ",match.group();
-#for match in licensename:
-#	print "License: ",match.group();
-pos = 0;
+	everything = re.findall('File\s+(\S+)\s+\S+\s+\S+\s+(\S+)\s+',match);
+	for x in everything: 
+		allinfo.insert(counter,x);
+print allinfo;
+#Storing the correct filename and license information into a MYSQL database.
 connect = MySQLdb.connect(host='localhost',
                           user='root',
                           passwd='Nikhit',
                           db='Details');
 cur = connect.cursor();
-for match in filename:
-	cur.execute("""INSERT INTO License (filename,license) VALUES (%s,%s)""",(match,license[pos]));
-	pos += 1;
+for match in allinfo:
+	cur.execute("""INSERT INTO license (filename,license) VALUES (%s,%s)""",(match[0],match[1]));
 connect.commit();
 connect.close();	
