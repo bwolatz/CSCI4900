@@ -13,11 +13,13 @@ Fossology - http://www.fossology.org/projects/fossology/wiki/Git_Download
 Ensure Python is version 2.7, if it is 3.0 it will not work<br />
 1. To check, run python --version
 ### To add libraries for DoSOCS<br /><br />
-1. SQLAlchemy - pip install sqlalchemy<br /> 
-2. sudo apt-get build-dep python-mysqldb<br />
-3. sudo apt-get install libpq-dev <br />
-4. pip install psycopg2 (For posstgreSQL)<br />
-5. sudo apt-get install libglib2.0-dev<br /><br />
+| File(s) | Commands |
+|........ | ........ |
+|SQLAlchemy|pip install sqlalchemy|
+|python-mysqldb|sudo apt-get build-dep python-mysqldb|
+|libpq-dev|sudo apt-get install libpq-dev|
+|posstgreSQL|pip install psycopg2|
+|libglib2.0-dev|sudo apt-get install libglib2.0-dev|
 ### Install Fossology and DoSOCS in your environment<br />
 For DoSOCS<br />
 1. Run the install-nomos.sh shell script in the /scripts directory of your DoSOCS installation.<br /><br />
