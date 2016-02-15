@@ -36,7 +36,7 @@ For Fossology<br />
 
 #### Install Maven in your environment<br/>
 For Maven<br />
-1. Type sudo apt-get install maven
+1. Type sudo apt-get install maven.<br/>
 2. To verify Type mvn -version.
 
 ## Environment.
