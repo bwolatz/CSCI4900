@@ -14,7 +14,7 @@ Ensure Python is version 2.7, if it is 3.0 it will not work<br />
 1. To check, run python --version
 ### To add libraries for DoSOCS<br /><br />
 | File(s) | Commands |
-|........ | ........ |
+| --- | --- |
 |SQLAlchemy|pip install sqlalchemy|
 |python-mysqldb|sudo apt-get build-dep python-mysqldb|
 |libpq-dev|sudo apt-get install libpq-dev|
