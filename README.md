@@ -41,4 +41,8 @@ For Maven<br />
 
 ## Environment.
 
+The enviornment should be in a Virual Box and Unix using Python code for any programs and scripts 
+
 ## Usage.
+
+Used to generate a list of dependecies given a pom.xml and one command. This will be a "one-shot" method of genertaing said list, and it uses programs such as SPDX and DoSOCS.
