@@ -1,0 +1,2 @@
+#System Description.
+We are creating a system that will communicate with DoSOCS and maven central to retrieve the project-level dependency and vulnarability information relating to the package or file that has been sent to them. To create the connection we will be using python script and all the information that is retrieved will be stored into a database which uses the SPDX schema provided in class. 
