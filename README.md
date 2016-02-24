@@ -1,18 +1,17 @@
-# CSCI4900 Fossology
+# CSCI4900 One-Shot DoSOCS
 
 ## Introduction.
-This is a Fossology project assigned by Matt to our team. The members of our team are Brian and Nikhit. We will be creating software that uses Fossology Nomos and DoSOCS to pull information from projects such as licensing information and dependency information including JAR files.
+The members of our team are Brian and Nikhit. We will be creating software that uses DoSOCS to pull information from projects' pom.xml files such as licensing information and dependency information including JAR files. It will accomplish this by integrating many programs together but ultimately it will require only one input from the developper using it.
 
 ## Copyright.
 Brian and Nikhit
 
 ## License(s).
-Because this code is free to use and share by everyone, our license will be Attribution 4.0 International
+Because this code is free to use and share by everyone, our license will be GNU GENERAL PUBLIC LICENSE
 
 ## Install Directions.
-#### Obtain Source Files for Fossology and DoSOCS<br />
+#### Obtain Source Files for DoSOCS<br />
 DoSOCS - https://github.com/DoSOCSv2/DoSOCSv2<br />
-Fossology - http://www.fossology.org/projects/fossology/wiki/Git_Download
 
 #### Install the correct dependencies/libraries for Python 2.7 and for DoSOCS<br />
 Ensure Python is version 2.7, if it is 3.0 it will not work<br />
@@ -27,12 +26,10 @@ Ensure Python is version 2.7, if it is 3.0 it will not work<br />
 |posstgreSQL|pip install psycopg2|
 |libglib2.0-dev|sudo apt-get install libglib2.0-dev|
 
-#### Install Fossology and DoSOCS in your environment<br />
+#### Install DoSOCS in your environment<br />
 For DoSOCS<br />
 1. Run the install-nomos.sh shell script in the /scripts directory of your DoSOCS installation.<br /><br />
-For Fossology<br />
-1. Add "deb http://www.fossology.org/releases/2.6.2/Ubuntu 'version' contrib" ('version' usually 14.04) to /etc/apt/sources.list<br />
-2. Run installation commands sudo apt-get update, sudo apt-get install fossology<br />
+
 
 #### Install Maven in your environment<br/>
 For Maven<br />
@@ -41,8 +38,8 @@ For Maven<br />
 
 ## Environment.
 
-The enviornment should be in a Virual Box and Unix using Python code for any programs and scripts 
+The enviornment should be in a Windows Virtual Box and Unix 14.04 using the Python programming languange for any programs and scripts 
 
 ## Usage.
 
-Used to generate a list of dependecies given a pom.xml and one command. This will be a "one-shot" method of genertaing said list, and it uses programs such as SPDX and DoSOCS.
+Used to generate a list of dependecies given a pom.xml and one command. This will be a "one-shot" method of genertaing said list, and it uses the program DoSOCS and the specification SPDX.
