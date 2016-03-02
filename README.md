@@ -1,7 +1,7 @@
 # CSCI4900 One-Shot DoSOCS
 
 ## Introduction.
-The members of our team are Brian and Nikhit. We will be creating software that uses DoSOCS to pull information from projects' pom.xml files such as licensing information and dependency information including JAR files. It will accomplish this by integrating many programs together but ultimately it will require only one input from the developper using it.
+The members of our team are Brian and Nikhit. We will be creating software that uses DoSOCS we will send a program's JAR files and dependency tree and it will return relevent information such as licensing information and SPDX documentation. It will accomplish this by integrating many programs together but ultimately it will require only one input from the developer using it.
 
 ## Copyright.
 Brian and Nikhit
