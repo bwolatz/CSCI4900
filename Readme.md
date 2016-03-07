@@ -11,7 +11,7 @@ Creative Commons Attribution 4.0 International License.<br />
 GNU GENERAL PUBLIC LICENSE
 
 ## Install Directions.
-#### Obtain Source Files for DoSOCS<br />
+#### Obtain Source Files and install inforamtion from DoSOCS<br />
 DoSOCS - https://github.com/DoSOCSv2/DoSOCSv2<br />
 
 #### Install the correct dependencies/libraries for Python 2.7 and for DoSOCS<br />
@@ -26,11 +26,6 @@ Ensure Python is version 2.7, if it is 3.0 it will not work<br />
 |libpq-dev|sudo apt-get install libpq-dev|
 |posstgreSQL|pip install psycopg2|
 |libglib2.0-dev|sudo apt-get install libglib2.0-dev|
-
-#### Install DoSOCS in your environment<br />
-For DoSOCS<br />
-1. Run the install-nomos.sh shell script in the /scripts directory of your DoSOCS installation.<br /><br />
-
 
 #### Install Maven in your environment<br/>
 For Maven<br />
