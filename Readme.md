@@ -7,7 +7,7 @@ The members of our team are Brian and Nikhit. We will be creating software that 
 Brian and Nikhit
 
 ## License(s).
-Because this code is free to use and share by everyone, our license will be GNU GENERAL PUBLIC LICENSE
+GNU GENERAL PUBLIC LICENSE
 
 ## Install Directions.
 #### Obtain Source Files for DoSOCS<br />
