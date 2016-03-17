@@ -40,26 +40,23 @@ class Dependency:
         	                        dep3Jars.append(line[9:])
 		strin = ""
         	for jar1 in dep1Jars:
-                	jar1.rstrip()
-                	strin = jar1.split(':')
-                	jar1 = strin[1] + "-" + strin[3] + ".jar"
-                	output = subprocess.Popen(['dosocs2', 'scan', jar1], stdout=subprocess.PIPE)
-                	out = output.stdout.read()
-                	out.rstrip()
+                	print("Scanning level-1 dependencies")
+                        jar1.rstrip()
+                        str = jar1.split(':')
+                        jar1 = str[1] + "-" + str[3] + ".jar"
+                        subprocess.call('dosocs2 scan '+jar1, shell=True)
 
-		for jar2 in dep2Jars:
-	                jar2.rstrip()
-	                strin = jar2.split(':')
-	                jar2 = strin[1] + "-" + strin[3] + ".jar"
-	                output = subprocess.Popen(['dosocs2', 'scan', jar2], stdout=subprocess.PIPE)
-	                out = output.stdout.read()
-	                out.rstrip()
-	
-	        for jar3 in dep3Jars:
-	                jar3.rstrip()
-	                strin = jar3.split(':')
-	                jar3 = strin[1] + "-" + strin[3] + ".jar"
-	                output = subprocess.Popen(['dosocs2', 'scan', jar3], stdout=subprocess.PIPE)
-	                out = output.stdout.read()
-	                out.rstrip()
+                for jar2 in dep2Jars:
+                        print("Scanning level-2 dependencies")
+                        jar2.rstrip()
+                        str = jar2.split(':')
+                        jar2 = str[1] + "-" + str[3] + ".jar"
+                        subprocess.call('dosocs2 scan '+jar2, shell=True)
+
+                for jar3 in dep3Jars:
+                        print("Scanning level-3 dependencies")
+                        jar3.rstrip()
+                        str = jar3.split(':')
+                        jar3 = str[1] + "-" + str[3] + ".jar"
+                        subprocess.call('dosocs2 scan '+jar3, shell=True)
 
