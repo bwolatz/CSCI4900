@@ -1,7 +1,7 @@
 # CSCI4900 One-Shot DoSOCS
 
 ##Introduction.
-The members of our team are Brian and Nikhit. We will be creating a software that uses a plugin to send pom.xml coordinates to maven to get all the jars and the dependency tree. Using the dependency tree we will gather relationship info. we will also use DoSOCS to scan the JAR files and which will return relevent information such as licensing information and SPDX documentation. Finally all the san information and the relationship information is stored in the database.
+The members of our team are Brian and Nikhit. We will be creating a software that uses a plugin to send pom.xml coordinates to maven to get all the jars and the dependency tree. Using the dependency tree we will gather relationship info on the other hand we will also use DoSOCS to scan the JAR files to get relevent information such as licensing information and SPDX documentation. Finally all the san information and the relationship information is stored in the database.
 
 ## Copyright.
 Brian and Nikhit
