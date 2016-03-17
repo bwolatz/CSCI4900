@@ -17,6 +17,9 @@ GNU GENERAL PUBLIC LICENSE
 release](https://github.com/bwolatz/CSCI4900/releases) and use `pip` to install
 it as a package. Replace `0.x.x` with the latest release version number.
 
+ $ tar xf 0.x.x.tar.gz
+ $ pip install ./CSCI4900-0.x.x
+
 #### Obtain Source Files and install inforamtion from DoSOCS<br />
 DoSOCS - https://github.com/DoSOCSv2/DoSOCSv2<br />
 
