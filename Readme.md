@@ -50,4 +50,3 @@ The enviornment should be in a Windows Virtual Box and Unix 14.04 using the Pyth
 The Usage of this program to get the coordinates and jars to get the relationships and scan is <br/>
 **dosmav /path/to/pom.xml**
 
-Used to generate a list of dependecies given a pom.xml and one command. This will be a "one-shot" method of genertaing said list, and it uses the program DoSOCS and the specification SPDX.
