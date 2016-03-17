@@ -9,5 +9,8 @@ Setup scripts, organizaing code(creating main.py and dependency.py), scanning ja
 2) What were your experiences and difficulties with this assignment? 
 tracking the dependencies using the pom.xml file is the most difficult part. This is the hardest part because we dint perfectly know how to finish the diagram.
 We were able to track down the dependency levels but we dint create a tree with relationships. We are working on the relationships part as it is difficult.
+I have been working and learning from the documentation in the docs.python.org. I have learned most of the setup scripting from there.
+
+Attribution: https://docs.python.org/
 
 Signed off by: Brian W
