@@ -13,7 +13,9 @@ GNU GENERAL PUBLIC LICENSE
 ## Install Directions.
 
 #### Plugin Install
-Download the folder and run pip install . within the top level of project.<br/>
+[Grab the source from the latest
+release](https://github.com/bwolatz/CSCI4900/releases) and use `pip` to install
+it as a package. Replace `0.x.x` with the latest release version number.
 
 #### Obtain Source Files and install inforamtion from DoSOCS<br />
 DoSOCS - https://github.com/DoSOCSv2/DoSOCSv2<br />
