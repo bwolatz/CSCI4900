@@ -11,6 +11,10 @@ Creative Commons Attribution 4.0 International License.<br />
 GNU GENERAL PUBLIC LICENSE
 
 ## Install Directions.
+
+#### Plugin Install
+Download the folder and run pip install . within the top level of project.<br/>
+
 #### Obtain Source Files and install inforamtion from DoSOCS<br />
 DoSOCS - https://github.com/DoSOCSv2/DoSOCSv2<br />
 
