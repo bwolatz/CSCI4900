@@ -7,8 +7,8 @@ The members of our team are Brian and Nikhit. We will be creating software that 
 Brian and Nikhit
 
 ## License(s).
-MIT © Nikhit Adusumilli, Brain
-CC-BY-SA-4.0 © Nikhit Adusumilli, Brain
+MIT © Nikhit Adusumilli, Brain<br/>
+CC-BY-SA-4.0 © Nikhit Adusumilli, Brain<br/>
 
 ## Install Directions.
 
@@ -47,7 +47,7 @@ The enviornment should be in a Windows Virtual Box and Unix 14.04 using the Pyth
 
 ## Usage.
 
-The Usage of this program to get the coordinates and jars to get the relationships and scan is 
-dosmav /path/to/pom.xml
+The Usage of this program to get the coordinates and jars to get the relationships and scan is <br/>
+**dosmav /path/to/pom.xml**
 
 Used to generate a list of dependecies given a pom.xml and one command. This will be a "one-shot" method of genertaing said list, and it uses the program DoSOCS and the specification SPDX.
