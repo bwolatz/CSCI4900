@@ -12,7 +12,7 @@ setup(
 	keywords='spdx licenses maven dosocs2',
 	packages=['src'],
 	
-	install_requires=['treelib','flake8','pyflakes','mccabe','pep8','dosocs2'],
+	install_requires=['treelib'],	
 
 	entry_points={'console_scripts':['dosmav=src.main:main']},
 	zip_safe=False

@@ -1,59 +1,32 @@
-#!/usr/bin/env python
-"""Imports"""
-import subprocess
-import glob
+#spdx-License-Identifier: MIT
+'''Usage:
+{0} FILE
+{0} (--help | --version)
+Arguments:
+    FILE    path to pom.xml
+'''
+import shutil
+import sys
 import os
-import re
+from dependency import Dependency
+from docopt import docopt
 
 __version__ = '0.0.1'
 
 def main():
-	pomdir = os.getcwd()
-	jardir = pomdir + "/jars"
-	treedir = pomdir + "/tree"
-	mvncommand = "mvn -q dependency:copy-dependencies -DcopyPom=true -DoutputDirectory="+jardir
-	mvncommand2 = "mvn -q dependency:tree -Doutput=" + treedir + "/tree.txt -DoutputType=tgf"
+    argv = docopt(
+        doc=__doc__.format(os.path.basename(sys.argv[0])),
+        argv=sys.argv[1:],
+        version=__version__
+    )
 
-	subprocess.call(mvncommand, shell=True)
+    if argv['FILE']:
+        dependency = Dependency()
 
-	os.chdir(pomdir)
-	subprocess.call(mvncommand2, shell=True)
+        dependency.copyPom(os.path.abspath(argv['FILE']))
+        dependency.getDependenciesandScan()
 
-	os.chdir(treedir)
-	p = re.compile('^[A-z]+$')
-	count = 0
-	dep1Jars = []
-	dep2Jars = []
-	dep3Jars = []
-	depfile = open('tree.txt', 'r')
-	for line in depfile:
-    """ skip first line """
-    		if count == 0:
-        	count += 1
-    		elif len(line) > 9:
-        	if p.match(line[3]) and line[3] != '\\':
-        	    	dep1Jars.append(line[3:])
-   	     	elif p.match(line[6]) and line[6] != '\\':
-	            	dep2Jars.append(line[6:])
-       	 	elif p.match(line[9]) and line[9] != '\\':
-            		dep3Jars.append(line[9:])
+        shutil.rmtree(dependency.tempdir)
 
-	os.chdir(jardir)
-	str = ""
-	for jar1 in dep1Jars:
-    		jar1.rstrip()
-    		str = jar1.split(':')
-    		jar1 = str[1] + "-" + str[3] + ".jar"
-    		subprocess.call('dosocs2 scan '+jar1, shell=True)
-
-	for jar2 in dep2Jars:
-    		jar2.rstrip()
-    		str = jar2.split(':')
-    		jar2 = str[1] + "-" + str[3] + ".jar"
-   		subprocess.call('dosocs2 scan '+jar2, shell=True)
-
-	for jar3 in dep3Jars:
-    		jar3.rstrip()
-    		str = jar3.split(':')
-    		jar3 = str[1] + "-" + str[3] + ".jar"
-    		subprocess.call('dosocs2 scan '+jar3, shell=True)
+if __name__ == "__main__":
+    sys.exit(main())
