@@ -7,8 +7,8 @@ The members of our team are Brian and Nikhit. We will be creating software that 
 Brian and Nikhit
 
 ## License(s).
-Creative Commons Attribution 4.0 International License.<br />
-GNU GENERAL PUBLIC LICENSE
+MIT © Nikhit Adusumilli, Brain
+CC-BY-SA-4.0 © Nikhit Adusumilli, Brain
 
 ## Install Directions.
 
