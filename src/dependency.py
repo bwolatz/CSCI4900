@@ -38,25 +38,38 @@ class Dependency:
 	                                dep2Jars.append(line[6:])
 				elif p.match(line[9]) and line[9] != '\\':
         	                        dep3Jars.append(line[9:])
+		if os.path.exists(jardir):
+                os.chdir(jardir)
+        	pkgFile = open("pkg.txt", "w")
 		strin = ""
         	for jar1 in dep1Jars:
                 	print("Scanning level-1 dependencies")
                         jar1.rstrip()
                         str = jar1.split(':')
                         jar1 = str[1] + "-" + str[3] + ".jar"
-                        subprocess.call('dosocs2 scan '+jar1, shell=True)
+                        output = subprocess.check_output(['dosocs2', 'scan', str(jar1)])
+                	print 'printing thing'
+                	print output
+                	print 'end'
 
                 for jar2 in dep2Jars:
                         print("Scanning level-2 dependencies")
                         jar2.rstrip()
                         str = jar2.split(':')
                         jar2 = str[1] + "-" + str[3] + ".jar"
-                        subprocess.call('dosocs2 scan '+jar2, shell=True)
+                        output = subprocess.check_output(['dosocs2', 'scan', str(jar2)])
+                	print 'printing thing'
+                	print output
+                	print 'end'
 
                 for jar3 in dep3Jars:
                         print("Scanning level-3 dependencies")
                         jar3.rstrip()
                         str = jar3.split(':')
-                        jar3 = str[1] + "-" + str[3] + ".jar"
-                        subprocess.call('dosocs2 scan '+jar3, shell=True)
+                        jar3 = strin[1] + "-" + strin[3] + ".jar"
+                	output = subprocess.check_output(['dosocs2', 'scan', str(jar3)])
+                	print 'printing thing'
+                	print output
+                	print 'end'
+
 
