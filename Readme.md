@@ -4,10 +4,13 @@
 The members of our team are Brian and Nikhit. We will be creating a software that uses a plugin to send pom.xml coordinates to maven to get all the jars and the dependency tree. Using the dependency tree we will gather relationship info on the other hand we will also use DoSOCS to scan the JAR files to get relevent information such as licensing information and SPDX documentation. Finally all the san information and the relationship information is stored in the database.
 
 ## Copyright.
-Brian and Nikhit
+Nikhit Adusumilli<br/>
+Brain
 
 ## License(s).
+####Source License<br/>
 MIT © Nikhit Adusumilli, Brain<br/>
+####Document License<br/>
 CC-BY-SA-4.0 © Nikhit Adusumilli, Brain<br/>
 
 ## Install Directions.
