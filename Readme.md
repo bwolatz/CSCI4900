@@ -5,7 +5,7 @@ The members of our team are Brian and Nikhit. We will be creating a software tha
 
 ## Copyright.
 Nikhit Adusumilli<br/>
-Brain
+Brian Wolatz
 
 ## License(s).
 ####Source License<br/>
