@@ -49,7 +49,7 @@ class Dependency:
                         token = jar1.split(':')
                         jar1 = token[1]+"-"+token[3]+".jar"
 			
-			output = subprocess.Popen('dosocs2 scan '+jar1, stdout=subprocess.PIPE , shell=True)
+			output = subprocess.Popen('dosocs2 scan '+jar1, stdout=subprocess.PIPE ,stderr=subprocess.STDOUT, shell=True)
                 	print'printing thing'
                 	line = output.stdout.readline().rstrip()
 			print'line: \n'+line
@@ -64,18 +64,26 @@ class Dependency:
                         token = jar2.split(':')
                         jar2 = token[1] + "-" + token[3] + ".jar"
 
-                        output = subprocess.Popen('dosocs2 scan '+ jar2, stdout=subprocess.PIPE, shell=True)
+                        output = subprocess.Popen('dosocs2 scan '+ jar2, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
                 	print 'printing thing'
-                	print output.stdout.readline().rstrip()
-                	print 'end'
+                	line =  output.stdout.readline().rstrip()
+                	print line
+			match = re.match(r".*package_id:\s?(\d+)",line)
+			if(match):
+				print'Package Id: '+match.group(1)
+			print 'end'
 
                 for jar3 in dep3Jars:
                         print("Scanning level-3 dependencies")
                         jar3.rstrip()
                         token = jar3.split(':')
                         jar3 = token[1] + "-" + token[3] + ".jar"
-                	output = subprocess.Popen('dosocs2 scan '+jar3,stdout = subprocess.PIPE, shell=True)
+                	output = subprocess.Popen('dosocs2 scan '+jar3,stdout = subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
                 	print 'printing thing'
-                	print output.stdout.readline().rstrip()
-                	print 'end'
+                	line = output.stdout.readline().rstrip()
+                	print line
+			match = re.match(r".*package_id:\s?(\d+)",line)
+			if(match):
+				print'Package Id: '+match.group(1)
+			print 'end'
 			print line
