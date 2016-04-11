@@ -59,7 +59,7 @@ class Dependency:
                         jar2.rstrip()
                         token = jar2.split(':')
                         jar2 = token[1] + "-" + token[3] + ".jar"
-                        output = subprocess.check_output(['dosocs2', 'scan', jar2])
+                        output = subprocess.check_output(['dosocs2', 'oneshot', jar2])
                 	print 'printing thing'
                 	print output
                 	print 'end'
@@ -69,9 +69,7 @@ class Dependency:
                         jar3.rstrip()
                         token = jar3.split(':')
                         jar3 = token[1] + "-" + token[3] + ".jar"
-                	output = subprocess.check_output(['dosocs2', 'scan', jar3])
+                	output = subprocess.check_output(['dosocs2', 'oneshot', jar3])
                 	print 'printing thing'
                 	print output
                 	print 'end'
-
-
