@@ -9,9 +9,9 @@ Brian Wolatz
 
 ## License(s).
 ####Source License<br/>
-MIT © Nikhit Adusumilli, Brain<br/>
+MIT © Nikhit Adusumilli, Brian Wolatz<br/>
 ####Document License<br/>
-CC-BY-SA-4.0 © Nikhit Adusumilli, Brain<br/>
+CC-BY-SA-4.0 © Nikhit Adusumilli, Brian Wolatz<br/>
 
 ## Install Directions.
 
