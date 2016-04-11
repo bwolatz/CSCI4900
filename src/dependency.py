@@ -43,6 +43,9 @@ class Dependency:
         		pkgFile = open("pkg.txt", "w")
 			token = ""
 			output = ""
+			line =""
+			docinfo = ""
+			docid=""
         	for jar1 in dep1Jars:
 			print("Scanning level-1 dependencies")
                         jar1.rstrip()
@@ -56,6 +59,7 @@ class Dependency:
 			match = re.match(r".*package_id:\s?(\d+)",line)
 			if(match):
 				print 'Package ID: '+match.group(1)
+				subprocess.check_output(['dosocs2','generate',match.group(1)])
                 	print'end'
 
                 for jar2 in dep2Jars:
@@ -71,6 +75,13 @@ class Dependency:
 			match = re.match(r".*package_id:\s?(\d+)",line)
 			if(match):
 				print'Package Id: '+match.group(1)
+				docinfo = subprocess.Popen('dosocs2 generate '+match.group(1), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
+				docid = docinfo.stdout.readline().rstrip()
+				print docid
+				docmatch = re.match(r".*document_id:\s?(\d+)",docid)
+				print 'Document Id: '+docmatch.group(1)
+				print subprocess.check_output(['dosocs2','print',docmatch.group(1)])
+				
 			print 'end'
 
                 for jar3 in dep3Jars:
@@ -85,5 +96,6 @@ class Dependency:
 			match = re.match(r".*package_id:\s?(\d+)",line)
 			if(match):
 				print'Package Id: '+match.group(1)
+				subprocess.check_output(['dosocs2','generate',match.group(1)])
 			print 'end'
 			print line
