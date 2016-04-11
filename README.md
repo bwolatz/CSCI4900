@@ -72,11 +72,11 @@ We are creating a system that will communicate with DoSOCS and maven central to 
 **Title**: Creating Dependency Relationship in SPDX.<br/>
 **Primary Actor**: Developer. <br/>
 **Goal in context**: Discover the relationships of a project using the pom.xml file and store in spdx database.<br/>
-**Stakeholders and Interests**: Developers. <br/>
-**Preconditions**: installed maven, dosocs, dosmav and all other environment dependencies. <br/>
+**Stakeholders and Interests**: Developers looking to capture dependency relationships for a given project. <br/>
+**Preconditions**: Install instructions located above, all these installations are needed. A POM.xml file to scan is also necessary. <br/>
 **Main success scenario**: succesfully Created dependency tree and stored relationship information in the SPDX schema. <br/>
-**Failed end conditions**: Dependency relationship not created.<br/>
-**Trigger**: running "dosmav pom file" on cmd.<br/>
+**Failed end conditions**: Dependency relationship not created and not stored.<br/>
+**Trigger**: running "dosmav pom-file" on cmd.<br/>
 
 ##Data Flow Diagram
 
