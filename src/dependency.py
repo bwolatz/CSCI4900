@@ -49,15 +49,13 @@ class Dependency:
                         token = jar1.split(':')
                         jar1 = token[1]+"-"+token[3]+".jar"
 			
-<<<<<<< HEAD
 			output = subprocess.Popen('dosocs2 scan '+jar1, stdout=subprocess.PIPE , shell=True)
                 	print'printing thing'
-                	print('Level - 1: '+output.stdout.readline().rstrip())
-=======
-			output = subprocess.check_output(['dosocs2', 'oneshot',jar1])
-                	print'printing thing'
-                	print('Level - 1: '+str(output))
->>>>>>> 82160ec2a07ef9caa9aa8f59818dd1ca00af4631
+                	line = output.stdout.readline().rstrip()
+			print'line: \n'+line
+			match = re.match(r".*package_id:\s?(\d+)",line)
+			if(match):
+				print 'Package ID: '+match.group(1)
                 	print'end'
 
                 for jar2 in dep2Jars:
@@ -65,15 +63,10 @@ class Dependency:
                         jar2.rstrip()
                         token = jar2.split(':')
                         jar2 = token[1] + "-" + token[3] + ".jar"
-<<<<<<< HEAD
+
                         output = subprocess.Popen('dosocs2 scan '+ jar2, stdout=subprocess.PIPE, shell=True)
                 	print 'printing thing'
                 	print output.stdout.readline().rstrip()
-=======
-                        output = subprocess.check_output(['dosocs2', 'oneshot', jar2])
-                	print 'printing thing'
-                	print output
->>>>>>> 82160ec2a07ef9caa9aa8f59818dd1ca00af4631
                 	print 'end'
 
                 for jar3 in dep3Jars:
@@ -81,13 +74,8 @@ class Dependency:
                         jar3.rstrip()
                         token = jar3.split(':')
                         jar3 = token[1] + "-" + token[3] + ".jar"
-<<<<<<< HEAD
                 	output = subprocess.Popen('dosocs2 scan '+jar3,stdout = subprocess.PIPE, shell=True)
                 	print 'printing thing'
                 	print output.stdout.readline().rstrip()
-=======
-                	output = subprocess.check_output(['dosocs2', 'oneshot', jar3])
-                	print 'printing thing'
-                	print output
->>>>>>> 82160ec2a07ef9caa9aa8f59818dd1ca00af4631
                 	print 'end'
+			print line
