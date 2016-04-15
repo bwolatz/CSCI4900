@@ -1,0 +1,21 @@
+Assignment 2 BW
+Assignment 2 Nikhit
+CC-SA-4.0.md
+License.md
+README.md
+setup.py
+Database Scema/Complete DoSOCS Schema.md
+Database Scema/DoSOCSSchema.md
+dosmav.egg-info/PKG-INFO
+dosmav.egg-info/SOURCES.txt
+dosmav.egg-info/dependency_links.txt
+dosmav.egg-info/entry_points.txt
+dosmav.egg-info/not-zip-safe
+dosmav.egg-info/requires.txt
+dosmav.egg-info/top_level.txt
+src/__init__.py
+src/__init__.pyc
+src/dependency.py
+src/dependency.pyc
+src/main.py
+src/main.pyc

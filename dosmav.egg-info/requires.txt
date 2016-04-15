@@ -1,0 +1,6 @@
+treelib
+jinja2
+python-magic
+docopt
+SQLAlchemy
+psycopg2

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: dosmav
+Version: 0.0.1
+Summary: Plugin to connect maven and dosocs for relationships
+Home-page: https://github.com/bwolatz/CSCI4900
+Author: Nikhit Adusumilli, Brain
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: spdx licenses maven dosocs2
+Platform: UNKNOWN
