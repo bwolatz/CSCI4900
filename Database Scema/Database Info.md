@@ -1,1 +1,1 @@
-We are not changing the database schema at all. We will be using the identifiers table to get the identifier information of each package and then use the identifier informaiton to store the relationship information(which uses the relationship_types table) into the relationships table.
+We are not changing the database schema at all. We will be using the identifiers table to query the identifier information of each package and then use the queried identifier informaiton to store the relationship information(which uses the relationship_types table) into the relationships table.
