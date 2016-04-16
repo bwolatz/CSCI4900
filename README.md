@@ -66,11 +66,11 @@ The Usage of this program to get the coordinates and jars to get the relationshi
 Brian and Nikhit will use GitHub as the main source of communication and open issues in GitHub for all problems, even if the issue creator plans on solving the issue himself, as it is important to keep the other team member up-to-date on the progress of the project. It is essential that this communication plan is employed, for it will keep all relevant project work documented and the other mediums of communicated will be either in-person or over github by creating issues and commits, both of which are very effective. Technical Issues with the project should be handled by submitting GitHub issues, other issues should be solved by in-person communication.
 
 ### Contributing to CSCI4900
-
+---
 Nikhit and Brian are working on this project for school, for academic integrity reasons, we are not accepting pull requests or commits from the community at this point in time. However, you can feel free to leave us any comments/feedback or post issues for us to look at.
 
 ##System Description.
----
+
 We are creating a system that will communicate with DoSOCS and maven central to retrieve the project-level dependency and vulnerability information relating to the package or file that has been sent to them (using the nomos portion of DoSOCS). To create the connection we will be using python scripts and all the information that is retrieved will be stored into a database which uses the SPDX schema provided in class. The SPDX document is generated and saved by DoSOCS as well.
 
 ##Use Cases
