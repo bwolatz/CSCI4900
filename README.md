@@ -24,7 +24,12 @@ it as a package. Replace `0.x.x` with the latest release version number.
 ` $ pip install ./CSCI4900-0.x.x`
 
 ##### Obtain Source Files and install inforamtion from DoSOCS<br />
-DoSOCS - https://github.com/DoSOCSv2/DoSOCSv2<br />
+[Grab the source from the latest
+release](https://github.com/nadusumilli/DoSOCSv2/releases) and use `pip` to install
+it as a package. Replace `0.x.x` with the latest release version number.
+
+` $ tar xf 0.x.x.tar.gz`<br/>
+` $ pip install ./DoSOCSv2-0.x.x`
 
 ##### Install the correct dependencies/libraries for Python 2.7 and for DoSOCS<br />
 Ensure Python is version 2.7, if it is 3.0 it will not work<br />
