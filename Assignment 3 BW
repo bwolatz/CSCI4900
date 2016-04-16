@@ -1,10 +1,12 @@
 NAME: Brian Wolatz
 Other Group Member: Nikhit
 
-Grade me specifically on: The functional code in main.py (not the defintion things). If you're grading the SHA-256 on this assignment as well I did that
+Grade me specifically on: Creating the functionality in our source that determines relationship level and sends it to the SPDX DB using dosocs. 
+The unit testing files and documents.
 
-My experiences: I don't know anything about maven or python so it's always a 20 tab chrome session of stack overflow whenever I want to get something done. I also experienced a hefty amount of problems with dosocs which kept initial development at bay.
+My experiences: Trying to figure out how to print out the relationship document and query the dosocs databse has been very hard for me. Putting the relationships into the databse, making custom dosocs functionality was challenging in its own right, but getting them out is way tougher for me.
 
 Signed off by:
 Nikhit
-Attribution: StackOverflow
+
+Attribution: StackOverflow, DoSOCS documentation
