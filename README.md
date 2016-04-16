@@ -100,6 +100,6 @@ These tests were performed using the broken up functions in the udependency.py a
 |5|Scan Tree For Levels|Scan the tree document to gather the parent-child relationships for the first three levels of dependencies|We call this method from the test case and pass it a tree file. It prints out the level of dependencies by parsinf through the tree file.|Pass|
 |6|Scan Dependencies by Level|Use dosocs to scan a dependency into the SPDX database. Use for the first three levels of dependencies|After the tree file is parsed above and the level of dependencies are printed we just scan them through dosocs.|Pass|
 |7|Create Relationship Document|Adds each parent-child relationship into the SPDX databse using custom-made dosocs functionality|we Call the method from the test case and pass it a tree file. the method parses through the file and scans the dependencies based on that. After that we parse for the relationships and send the parent and child dependencies to dosocs where it gets the parent and child identifiers and prints them. Then i send the information into the database table.|Pass|
-|8|Print Relationship Tree|Print out the relationship document from the database.||Fail|
+|8|Print Relationship Tree|Print out the relationship document from the database.|We are still working on creating the method.|Fail|
 |9|Delete the Temp Directory|Removes the temporary directory from the system.|we call the method from the test case where it just calls the shutil.rmtree and deletes all the temp file. We list all documents to make sure the temp file is deleted|Pass|
 
