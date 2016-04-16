@@ -1,7 +1,7 @@
 NAME: Brian Wolatz
 Other Group Member: Nikhit
 
-Grade me specifically on: Creating the functionality in our source that determines relationship level and sends it to the SPDX DB using dosocs. 
+Grade me specifically on: Creating the functionality in our source that determines relationship level and sends it to dosocs using dosocs2 relation. 
 The unit testing files and documents.
 
 My experiences: Trying to figure out how to print out the relationship document and query the dosocs databse has been very hard for me. Putting the relationships into the databse, making custom dosocs functionality was challenging in its own right, but getting them out is way tougher for me.
