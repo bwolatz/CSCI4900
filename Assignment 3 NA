@@ -1,16 +1,14 @@
-Assignment Two Info - Nikhit
+Assignment Three Info - Nikhit
 
 Name: Nikhit
 Partner: Brain
 
 1) What would you like me to specifically grade you on?
-Setup scripts, organizaing code(creating main.py and dependency.py), scanning jars in dependency.py
+Setup scripts, getting the relationship info into the database by working with dosocs, updating project documents.
 
 2) What were your experiences and difficulties with this assignment? 
-tracking the dependencies using the pom.xml file is the most difficult part. This is the hardest part because we dint perfectly know how to finish the diagram.
-We were able to track down the dependency levels but we dint create a tree with relationships. We are working on the relationships part as it is difficult.
-I have been working and learning from the documentation in the docs.python.org. I have learned most of the setup scripting from there.
+Getting the relationships into the database was the hardest part. I was working it for a long time and was having some problems with the code. I got help from the other team members for getting the information into the dosocs database. I have been trying to get the realtionship informaiton into the database but havent been successful.
 
-Attribution: https://docs.python.org/
+Attribution: https://docs.python.org/, jesse, tyler
 
 Signed off by: Brian W
